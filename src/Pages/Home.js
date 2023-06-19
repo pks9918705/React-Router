@@ -1,9 +1,18 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-export default function Home() {
+
+function Home() {
   return (
-    <div>
-      <h1 className='navbar__list'>Home</h1>
-    </div>
-  )
+    <>
+   
+      <main>
+        
+        <h1>Home Page</h1>
+        <Link to="/about">About</Link>&nbsp;&nbsp;
+        <Link to="/items">Items</Link>
+      </main>
+    </>
+  );
 }
+
+export default Home;

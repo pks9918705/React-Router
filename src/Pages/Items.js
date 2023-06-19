@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-function About() {
+ 
+
+function Items() {
   return (
     <>
-     
+   
       <main>
         
-        <h1>About Page</h1>
+        <h1>Items Page</h1>
         <Link to="/">back</Link>
       </main>
     </>
   );
 }
 
-export default About;
+export default Items;

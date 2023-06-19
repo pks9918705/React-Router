@@ -1,15 +1,24 @@
-import React from 'react'
- 
+import { Link, Outlet } from "react-router-dom";
 
-export default function Navbar({setPage}) {
-
- 
+function Navbar() {
   return (
-    < >
-    <h5 onClick={()=>setPage("home")}>Home</h5>
-    <h5 onClick={()=>setPage("about")}>About</h5>
-    <h5 onClick={()=>setPage("contact")}>Contact Us</h5>
-     
+    <>
+      <div className="nav">
+       <Link to="/">
+       <h4>HOME </h4>
+       </Link>
+       <Link to="/about">
+       <h4>ABOUT </h4>
+       </Link>
+       <Link to="/items">
+       <h4>ITEMS</h4>
+       </Link>
+          
+          
+      </div>
+      <Outlet/>
     </>
-  )
+  );
 }
+
+export default Navbar;
