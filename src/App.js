@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Items from "./pages/Items";
 import Navbar from "./components/Navbar";
+import ItemDetails from "./pages/ItemDetails";
 
 function App() {
   //! this below code shows that the "NAVBAR" is at the top and in below there is the childern of the navbar 
@@ -20,8 +21,12 @@ function App() {
         // {path:"/",element:<Home/>},
         // {path:"",element:<Home/>},
         {index:true,element:<Home/>},
-        {path:"/about",element:<About/>},
-        {path:"/items",element:<Items/>}
+        {path:"about",element:<About/>},
+        {path:"items",element:<Items/>},
+        {
+          path:'items/:itemId',
+          element:<ItemDetails/>
+        }
       ]
     }
   ]
