@@ -1,20 +1,30 @@
 import { Link } from "react-router-dom";
- 
+import { ITEMS } from "../data/itemData";
+
 
 function Items() {
+
+  
   return (
     <>
-   
+
       <main>
-        
+
         <h1>Items Page</h1>
         <Link to="/">back</Link>
-
-        <Link to='/items/item1'> <h2>Item-1</h2></Link>
-        <Link to='/items/item2'> <h2>Item-2</h2></Link>
-        <Link to='/items/item3'> <h2>Item-3</h2></Link>
-        
       </main>
+      <ul>
+        {ITEMS.map((item )=> (
+          <li>
+            <Link to={`/items/${item.id}`}>
+            <small>{item.id}</small>
+            </Link>
+            
+
+          </li>
+        )
+        )}
+      </ul>
     </>
   );
 }
